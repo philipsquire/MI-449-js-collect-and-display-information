@@ -6,9 +6,7 @@ const phoneInput = document.getElementById('phone-number')
 const introOutput = document.getElementById('hi')
 const descriptionOuput = document.getElementById('description-output')
 const contactOutput = document.getElementById('contact')
-const codeIntroOutput = document.getElementById('code-hi')
-const codeDescriptionOuput = document.getElementById('code-description-output')
-const codeContactOutput = document.getElementById('code-contact')
+const codeOutput = document.getElementById('code-area')
 
 const updatePreview = function () {
   const firstName = firstNameInput.value
@@ -25,9 +23,8 @@ const updatePreview = function () {
   introOutput.innerHTML = intro
   descriptionOuput.innerHTML = descriptOut
   contactOutput.innerHTML = contactOut
-  codeIntroOutput.innerText = intro
-  codeDescriptionOuput.innerText = descriptOut
-  codeContactOutput.innerText = contactOut
+  codeOutput.innerText =
+    '<h1>' + intro + '</h1>' + '\n' + '<p>' + descriptOut + '</p>' + '\n' + '<p>' + contactOut + '</p>'
 }
 
 firstNameInput.addEventListener('input', updatePreview)
