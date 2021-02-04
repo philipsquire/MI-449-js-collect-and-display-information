@@ -15,20 +15,19 @@ const updatePreview = function () {
   const lastName = lastNameInput.value
   const email = emailInput.value
   const phone = phoneInput.value
-  introOutput.innerHTML = 'Hi, my name is ' + firstName + ' ' + lastName + '!'
-  descriptionOuput.innerHTML = descriptionInput.value
-  contactOutput.innerHTML =
+  const descriptOut = descriptionInput.value
+  const intro = 'Hi, my name is ' + firstName + ' ' + lastName + '!'
+  const contactOut =
     'If you\'re interested in a date, you can email me at ' +
     '<a href="mailto:' + email + '" target="_blank">' +
     email + '</a> or give me a call at ' +
     '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.'
-  codeIntroOutput.innerText = 'Hi, my name is ' + firstName + ' ' + lastName + '!'
-  codeDescriptionOuput.innerText = descriptionInput.value
-  codeContactOutput.innerText =
-    'If you\'re interested in a date, you can email me at ' +
-    '<a href="mailto:' + email + '" target="_blank">' +
-    email + '</a> or give me a call at ' +
-    '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.'
+  introOutput.innerHTML = intro
+  descriptionOuput.innerHTML = descriptOut
+  contactOutput.innerHTML = contactOut
+  codeIntroOutput.innerText = intro
+  codeDescriptionOuput.innerText = descriptOut
+  codeContactOutput.innerText = contactOut
 }
 
 firstNameInput.addEventListener('input', updatePreview)
